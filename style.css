@@ -1,0 +1,107 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+#sidebar {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  opacity: 50%;
+}
+
+#sidebar a {
+  position: absolute;
+  padding: 2px 2px;
+  left: 36%;
+  top: 15%;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+#sidebar .closebtn {
+  background-color: transparent;
+  position: absolute;
+  top: -2%;
+  left: 94%;
+  font-size: 25px;
+  padding: 5px 5px;
+  color:  #ffffff;
+}
+
+.slider {
+  position: absolute;
+  -webkit-appearance: none;
+  /* transform: rotate(90deg); */
+  top: 50%;
+  left: 4%;
+  width: 90%;
+  height: 5%;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ff0000;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ff0000;
+  cursor: pointer;
+}
+
+#main {
+  height: 40%;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+}
+
+.openbtn {
+  position: absolute;
+  bottom: 10%;
+  left: 43.5%;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+#container {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    display: block;
+  }

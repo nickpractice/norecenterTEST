@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>0 1 0.75</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="//cdn.8thwall.com/web/aframe/8frame-1.1.0.min.js"></script>
+
+    <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
+
+    <!-- 8thWall Web - Replace the app key here with your own app key -->
+    <script async src="//apps.8thwall.com/xrweb?appKey=c3xu97LXoJrlZ46itZ8K9Ap67glv5RTyldmcZyzmwE0I7OZEF59DN8qickXCHkHbwFdAPD"></script>
+
+    <script src="startTracking.js"></script>
+    <script src="sidebar.js"></script>
+
+  </head>
+
+  <body>
+
+    <div id="container"></div>
+    <div id="sidebar"></div>
+    <div id="main"></div>
+
+    <a-scene
+      xrextras-almost-there
+      xrextras-loading
+      xrextras-runtime-error
+      renderer="colorManagement:true"
+      xrweb
+      start-tracking
+      recenter="recenterDistance: 3; recenterHeight: 1; recenterFactor: 0.75"
+      populate-sidebar>
+
+      <a-assets>
+        <a-asset-item id="3dmodel" src="assets/CIVf.glb"></a-asset-item>
+      </a-assets>
+
+      <a-camera
+        position="0 1 0">
+        <a-entity
+        id="loadingText"
+        text="value: Please move your phone from right to left to calibrate scene; align: center; "
+        scale="0.5 0.5 0.5"
+        position="0 0 -1"></a-entity>
+      </a-camera>
+
+      <a-entity
+        light="
+          type: directional;
+          intensity: 0.8;
+          castShadow: true;
+          shadowMapHeight:2048;
+          shadowMapWidth:2048;
+          shadowCameraTop: 20;
+          shadowCameraBottom: -20;
+          shadowCameraRight: 20;
+          shadowCameraLeft: -20;
+          target: #camera"
+        xrextras-attach="target: camera; offset: 8 15 4"
+        position="1 4.3 2.5"
+        shadow>
+      </a-entity>
+
+      <a-light type="ambient" intensity="0.5"></a-light>
+      
+    </a-scene>
+  </body>
+</html>
